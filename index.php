@@ -1,9 +1,5 @@
 <?php
     include 'dist/php/database.php';
-
-    // header('Content-Type: application/json');
-
-    // echo json_encode($database);
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +44,10 @@
         <div class="album-container">
             <div v-for="disco in dischi" class="album">
                 <img :src="disco.poster" alt="">
+                <h4> {{ disco.title }} </h4>
+                <h3> {{ disco.author }} </h3>
+                <span> {{ disco.genre }} </span>
+                <span> {{ disco.year }} </span>
             </div>
             
         </div>
