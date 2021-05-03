@@ -225,3 +225,9 @@ h1 {
   height: 250px;
   width: 250px;
 }
+.album-container .album h3 {
+  font-size: 1.25em;
+}
+.album-container .album h4 {
+  font-weight: 500;
+}

@@ -1,5 +1,9 @@
 <?php
-    include 'dist/php/database.php'
+    include 'dist/php/database.php';
+
+    // header('Content-Type: application/json');
+
+    // echo json_encode($database);
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +24,7 @@
 </head>
 <body>
     <div class="container-fluid">
-        <h1>Spotify</h1>
+        <h1>Tramite php</h1>
         <div class="album-container">
 
             <?php
@@ -29,9 +33,9 @@
                 ?><div class="album">
                     <img src="<?= $value['poster'] ?>">
                     <h4><?= $value['title'] ?></h4>
-                    <h4><?= $value['author'] ?></h4>
-                    <h4><?= $value['genre'] ?></h4>
-                    <h4><?= $value['year'] ?></h4>
+                    <h3><?= $value['author'] ?></h3>
+                    <span><?= $value['genre'] ?></span>
+                    <span><?= $value['year'] ?></span>
                 </div>
             <?php
             } ?>
@@ -39,5 +43,20 @@
             
         </div>
     </div>
+    <div id="root"class="container-fluid">
+        <h1>Tramite vue</h1>
+        <div class="album-container">
+            <div v-for="disco in dischi" class="album">
+                <img :src="disco.poster" alt="">
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- link a librerie js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="dist/js/main.js"></script>
 </body>
 </html>
