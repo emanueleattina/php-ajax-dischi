@@ -204,14 +204,24 @@ p {
   margin-right: 100px;
 }
 
-.album-container {
-  padding: 50px;
-}
-.album-container h1 {
+h1 {
   font-size: 2.5em;
   font-weight: 700;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.album-container {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.album-container .album {
+  text-align: center;
+  margin-right: 25px;
+  margin-bottom: 25px;
 }
 .album-container .album img {
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 250px;
 }
