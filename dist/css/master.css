@@ -211,3 +211,7 @@ p {
   font-size: 2.5em;
   font-weight: 700;
 }
+.album-container .album img {
+  height: 150px;
+  width: 150px;
+}
